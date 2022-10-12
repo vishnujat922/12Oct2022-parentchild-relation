@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css transform</title>
+        <style>
+            div.r{
+                /*state 1*/
+                width:400px;
+                height:400px;
+                background:red;
+                border: 10px solid black;
+                margin: 100px auto;
+                position: relative;
+            }
+            div.r>div.g{
+                width:200px;
+                height:200px;
+                background:green;
+                border-radius: 25px;
+                border: 10px solid black;
+                position: absolute;
+                bottom:0px;
+                right:0px;
+                transform:rotate(0deg) scale(1,1) translate(0px,0px); 
+                transform-origin:bottom right;
+                transition: all 5s linear;
+            }
+            .r>.g:hover{
+                /*state 2*/      
+                transform:rotate(360deg) scale(1.5,1.5) translate(0px,200px)     
+            }
+        </style>
+    </head>
+    <body>
+        <div class="r">
+            <div class="g"></div>
+        </div>
+        
+    </body>
+</html>
