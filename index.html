@@ -16,27 +16,76 @@
                 position: relative;
             }
             div.r>div.g{
+                /*state 1*/
                 width:200px;
                 height:200px;
                 background:green;
-                border-radius: 25px;
-                border: 10px solid black;
-                position: absolute;
-                bottom:0px;
-                right:0px;
                 transform:rotate(0deg) scale(1,1) translate(0px,0px); 
-                transform-origin:bottom right;
+                transform-origin: bottom right;
                 transition: all 5s linear;
             }
             .r>.g:hover{
                 /*state 2*/      
-                transform:rotate(360deg) scale(1.5,1.5) translate(0px,200px)     
+                transform:rotate(360deg) scale(1.5,1.5) translate(0px,0px);
+                background: orangered;    
+            }
+            .r>.b{
+                /*state 1*/
+                width:200px;
+                height:200px;
+                background:blue;
+                transform:rotate(0deg) scale(1,1) translate(0px,0px); 
+                transform-origin:top right;
+                transition: all 5s linear 2s;
+            }
+            .r>.b:hover{
+                /*state 2*/      
+                transform:rotate(360deg) scale(1.5,1.5) translate(0px,0px);
+                background: cadetblue;    
+            }
+            .r>.a{
+                /*state 1*/
+                width:200px;
+                height:200px;
+                background:aquamarine;
+                position: absolute;
+                top:0px;
+                right:0px;
+                transform:rotate(0deg) scale(1,1) translate(0px,0px); 
+                transform-origin:bottom left;
+                transition: all 5s linear 2s;
+            
+            }
+            .r>.a:hover{
+                /*state 2*/      
+                transform:rotate(360deg) scale(1.5,1.5) translate(0px,0px);
+                background: purple;    
+            }
+            .r>.c{
+                /*state 1*/
+                width:200px;
+                height:200px;
+                background: crimson;
+                position: absolute;
+                bottom:0px;
+                right:0px;
+                transform:rotate(0deg) scale(1,1) translate(0px,0px); 
+                transform-origin:top left;
+                transition: all 5s linear 2s;
+            }
+            .r>.c:hover{
+                /*state 2*/      
+                transform:rotate(360deg) scale(1.5,1.5) translate(0px,0px);
+                background: cyan;    
             }
         </style>
     </head>
     <body>
         <div class="r">
             <div class="g"></div>
+            <div class="b"></div>
+            <div class="a"></div>
+            <div class="c"></div>
         </div>
         
     </body>
